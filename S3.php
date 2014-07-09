@@ -2104,7 +2104,8 @@ final class S3Request
 			array_key_exists('location', $this->parameters) ||
 			array_key_exists('torrent', $this->parameters) ||
 			array_key_exists('website', $this->parameters) ||
-			array_key_exists('logging', $this->parameters))
+			array_key_exists('logging', $this->parameters) ||
+			array_key_exists('uploads', $this->parameters))
 				$this->resource .= $query;
 		}
 		$url = (S3::$useSSL ? 'https://' : 'http://') . ($this->headers['Host'] !== '' ? $this->headers['Host'] : $this->endpoint) . $this->uri;
