@@ -2203,6 +2203,8 @@ final class S3Request
 			array_key_exists('torrent', $this->parameters) ||
 			array_key_exists('website', $this->parameters) ||
 			array_key_exists('logging', $this->parameters) ||
+			array_key_exists('partNumber', $this->parameters) ||
+			array_key_exists('uploadId', $this->parameters) ||
 			array_key_exists('uploads', $this->parameters))
 				$this->resource .= $query;
 		}
